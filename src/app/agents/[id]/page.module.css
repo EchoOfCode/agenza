@@ -1,0 +1,521 @@
+.page {
+    min-height: 100vh;
+    background: var(--off-white);
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 60vh;
+    font-family: var(--font-mono);
+    color: var(--gray);
+}
+
+.breadcrumb {
+    padding: 1rem 0;
+    background: var(--black);
+    border-bottom: var(--border-thick);
+}
+
+.breadcrumb .container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--gray);
+}
+
+.backLink {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--yellow);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition);
+}
+
+.backLink:hover {
+    color: var(--white);
+}
+
+.hero {
+    padding: 3rem 0;
+    background: var(--black);
+    color: var(--white);
+}
+
+.heroGrid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: center;
+}
+
+.heroBadges {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.categoryBadge {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.6rem;
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.verifiedBadge {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.3rem 0.6rem;
+    background: var(--green);
+    color: var(--black);
+    border: 2px solid var(--black);
+}
+
+.heroTitle {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+.heroDesc {
+    font-size: 1rem;
+    color: var(--gray);
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+}
+
+.heroMeta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+.heroCtas {
+    display: flex;
+    gap: 1rem;
+}
+
+.heroRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.bigScoreRing {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigScoreRing svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bigScoreValue {
+    font-family: var(--font-mono);
+    font-size: 2.5rem;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.scoreLabel {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--gray);
+}
+
+.benchmarkSection {
+    padding: 3rem 0;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.sectionHeader h2 {
+    font-size: 1.3rem;
+}
+
+.benchmarkGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.benchmarkCard {
+    background: var(--white);
+    border: var(--border-thick);
+    box-shadow: var(--shadow-brutal);
+    padding: 1.5rem;
+}
+
+.benchmarkCardTitle {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: var(--border-thin);
+}
+
+.scoreBars {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.scoreBar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.scoreBarHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.scoreBarIcon {
+    color: var(--gray);
+}
+
+.scoreBarLabel {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--gray-dark);
+    flex: 1;
+}
+
+.scoreBarValue {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.scoreBarTrack {
+    height: 10px;
+    background: var(--off-white);
+    border: 2px solid var(--black);
+    overflow: hidden;
+}
+
+.scoreBarFill {
+    height: 100%;
+}
+
+.formula {
+    margin-top: 1.25rem;
+    padding: 0.75rem;
+    background: var(--black);
+    border: 2px solid var(--gray-dark);
+}
+
+.formula code {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--green);
+}
+
+.specGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.specRow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--off-white);
+}
+
+.specRow:last-child {
+    border-bottom: none;
+}
+
+.specIcon {
+    color: var(--gray);
+    flex-shrink: 0;
+}
+
+.specLabel {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--gray);
+    letter-spacing: 0.05em;
+    flex: 1;
+}
+
+.specValue {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.workflowSection {
+    padding: 0 0 3rem;
+}
+
+.workflowDesc {
+    font-size: 0.9rem;
+    color: var(--gray-dark);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+.pipelineCard {
+    background: var(--white);
+    border: var(--border-thick);
+    box-shadow: var(--shadow-brutal);
+    padding: 2rem;
+}
+
+.pipelineLabel {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: var(--border-thin);
+}
+
+.pipeline {
+    display: flex;
+    flex-direction: column;
+}
+
+.pipelineStep {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.pipelineArrow {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+    color: var(--gray);
+}
+
+.pipelineNode {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border: 3px solid var(--gray);
+    background: var(--off-white);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.pipelineNode:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--black);
+}
+
+.pipelineIcon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--black);
+    border: 2px solid currentColor;
+}
+
+.pipelineNodeName {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.pipelineNodeDesc {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--gray);
+    margin-top: 0.15rem;
+}
+
+.pipelineNum {
+    margin-left: auto;
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--gray);
+    opacity: 0.3;
+}
+
+.pipelineFooter {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    padding-top: 0.75rem;
+    border-top: var(--border-thin);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--gray);
+}
+
+.historySection {
+    padding: 2rem 0 3rem;
+}
+
+.emptyHistory {
+    text-align: center;
+    padding: 2.5rem;
+    background: var(--white);
+    border: var(--border-thick);
+    box-shadow: var(--shadow-brutal);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+
+.historyTable {
+    background: var(--white);
+    border: var(--border-thick);
+    box-shadow: var(--shadow-brutal);
+    overflow: hidden;
+}
+
+.historyHead {
+    display: grid;
+    grid-template-columns: 50px 1fr 100px 80px 80px;
+    gap: 1rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.historyRow {
+    display: grid;
+    grid-template-columns: 50px 1fr 100px 80px 80px;
+    gap: 1rem;
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid var(--off-white);
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.historyRow:last-child {
+    border-bottom: none;
+}
+
+.historyGoal {
+    font-size: 0.8rem;
+    color: var(--gray-dark);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.historyMono {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.ctaSection {
+    padding: 0 0 4rem;
+}
+
+.ctaCard {
+    background: var(--black);
+    color: var(--white);
+    border: var(--border-thick);
+    box-shadow: var(--shadow-brutal);
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.ctaCard h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.ctaButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .heroGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .heroRight {
+        align-items: flex-start;
+    }
+
+    .benchmarkGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .historyHead,
+    .historyRow {
+        grid-template-columns: 40px 1fr 80px 70px;
+    }
+
+    .historyHead span:last-child,
+    .historyRow span:last-child {
+        display: none;
+    }
+
+    .heroMeta {
+        gap: 1rem;
+    }
+}

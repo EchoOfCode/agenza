@@ -1,0 +1,361 @@
+.page {
+    min-height: 100vh;
+    background: var(--off-white);
+}
+
+.header {
+    padding: 3rem 0 2rem;
+    background: var(--black);
+    color: var(--white);
+    border-bottom: var(--border-thick);
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.headerActions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.statsSection {
+    padding: 2rem 0;
+    margin-top: -1rem;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.statCard {
+    background: var(--white);
+    border: var(--border);
+    box-shadow: var(--shadow-brutal-sm);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform var(--transition);
+}
+
+.statCard:hover {
+    transform: translate(-2px, -2px);
+}
+
+.statIcon {
+    margin-bottom: 0.5rem;
+}
+
+.statValue {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.statLabel {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--gray);
+    margin-top: 0.35rem;
+}
+
+.sectionHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.viewAll {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray);
+    transition: color var(--transition);
+}
+
+.viewAll:hover {
+    color: var(--black);
+}
+
+.deployedGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.deployedCard {
+    background: var(--white);
+    border: var(--border);
+    box-shadow: var(--shadow-brutal);
+    padding: 1.5rem;
+    transition: transform var(--transition);
+}
+
+.deployedCard:hover {
+    transform: translate(-2px, -2px);
+}
+
+.dcHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+}
+
+.dcName {
+    font-size: 1rem;
+    text-transform: none;
+    margin-bottom: 0.25rem;
+}
+
+.dcCategory {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--gray);
+}
+
+.dcStatus {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--green);
+}
+
+.statusDotActive {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+.dcMetrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    padding: 0.75rem 0;
+    border-top: 2px solid var(--off-white);
+}
+
+.dcMetricLabel {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    font-weight: 600;
+    color: var(--gray);
+    letter-spacing: 0.1em;
+}
+
+.dcMetricVal {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-top: 0.15rem;
+}
+
+.dcBar {
+    height: 4px;
+    background: var(--off-white);
+    margin-top: 1rem;
+}
+
+.dcBarFill {
+    height: 100%;
+    background: var(--green);
+    transition: width 0.6s ease;
+}
+
+.historySection {
+    background: var(--white);
+    border-top: var(--border-thick);
+}
+
+.historyTable {
+    border: var(--border);
+    box-shadow: var(--shadow-brutal);
+    overflow: hidden;
+}
+
+.historyHead {
+    display: grid;
+    grid-template-columns: 60px 1.2fr 2fr 0.8fr 0.8fr 1fr;
+    padding: 0.75rem 1.25rem;
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.historyRow {
+    display: grid;
+    grid-template-columns: 60px 1.2fr 2fr 0.8fr 0.8fr 1fr;
+    padding: 0.85rem 1.25rem;
+    align-items: center;
+    border-bottom: 2px solid var(--off-white);
+    transition: background var(--transition);
+}
+
+.historyRow:hover {
+    background: var(--off-white);
+}
+
+.iconSuccess {
+    color: var(--green);
+}
+
+.iconFailed {
+    color: var(--red);
+}
+
+.iconRunning {
+    color: var(--yellow);
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.historyAgent {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.historyTask {
+    font-size: 0.8rem;
+    color: var(--gray-dark);
+}
+
+.historyMono {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.historyDate {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--gray);
+}
+
+.quickSection {
+    padding: 3rem 0 5rem;
+}
+
+.quickGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.quickCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 2rem;
+    background: var(--white);
+    border: 3px solid var(--gray-light);
+    text-align: center;
+    text-decoration: none;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.quickCard:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: var(--shadow-brutal);
+}
+
+.quickCard h3 {
+    font-size: 1rem;
+}
+
+.quickCard p {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--gray);
+}
+
+@media (max-width: 1024px) {
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .deployedGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .headerContent {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .deployedGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .quickGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .historyHead,
+    .historyRow {
+        grid-template-columns: 40px 1fr 1.5fr 0.6fr;
+    }
+
+    .historyHead span:nth-child(5),
+    .historyHead span:nth-child(6),
+    .historyRow span:nth-child(5),
+    .historyRow span:nth-child(6) {
+        display: none;
+    }
+}

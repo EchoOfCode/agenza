@@ -1,0 +1,340 @@
+.page {
+    min-height: 100vh;
+    background: var(--off-white);
+}
+
+.header {
+    padding: 3rem 0 2rem;
+    background: var(--black);
+    color: var(--white);
+    border-bottom: var(--border-thick);
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.subtitle {
+    margin-top: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+
+.liveTag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--green);
+    padding: 0.4rem 0.75rem;
+    border: 2px solid var(--green);
+}
+
+.liveDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.log_info .logText {
+    color: var(--cyan);
+}
+
+.log_tool .logText {
+    color: var(--yellow);
+}
+
+.log_success .logText {
+    color: var(--green);
+}
+
+.log_error .logText {
+    color: var(--red);
+}
+
+.panelMeta {
+    display: flex;
+    gap: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--gray);
+}
+
+.panelMeta span {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.taskSection {
+    padding: 2rem 0;
+}
+
+.taskCard {
+    background: var(--white);
+    border: var(--border-thick);
+    box-shadow: var(--shadow-brutal);
+    padding: 2rem;
+}
+
+.taskLabel {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+}
+
+.taskText {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: var(--border-thin);
+}
+
+.agentSelectors {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.selectorGroup {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.selectorLabel {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--gray);
+}
+
+.vs {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--red);
+    padding-top: 1.25rem;
+}
+
+.taskActions {
+    display: flex;
+    justify-content: center;
+}
+
+.battleSection {
+    padding: 0 0 2rem;
+}
+
+.battleGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.panel {
+    background: var(--white);
+    border: var(--border-thick);
+    box-shadow: var(--shadow-brutal);
+    overflow: hidden;
+}
+
+.panelHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    border-bottom: var(--border);
+    background: var(--off-white);
+}
+
+.panelName {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.panelMetrics {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.75rem 1.25rem;
+    border-bottom: var(--border-thin);
+    background: var(--white);
+}
+
+.panelMetric {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.terminal {
+    background: var(--black);
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 1rem 1.25rem;
+    min-height: 350px;
+    max-height: 400px;
+    overflow-y: auto;
+    line-height: 1.7;
+}
+
+.termIdle {
+    color: var(--gray);
+    font-style: italic;
+}
+
+.logLine {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.logTime {
+    color: var(--gray);
+    flex-shrink: 0;
+    min-width: 40px;
+}
+
+.logInfo {
+    color: var(--cyan);
+}
+
+.logTool {
+    color: var(--yellow);
+}
+
+.logSuccess {
+    color: var(--green);
+}
+
+.logError {
+    color: var(--red);
+}
+
+.cursor {
+    color: var(--green);
+}
+
+.comparisonSection {
+    padding: 2rem 0 4rem;
+}
+
+.winnerBanner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: var(--yellow);
+    border: var(--border-thick);
+    box-shadow: var(--shadow-brutal);
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.winnerReason {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    background: var(--black);
+    color: var(--yellow);
+    padding: 0.25rem 0.5rem;
+}
+
+.compTable {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border: var(--border-thick);
+    box-shadow: var(--shadow-brutal);
+}
+
+.compTable th,
+.compTable td {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    border-bottom: 2px solid var(--off-white);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+}
+
+.compTable th {
+    background: var(--black);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.alphaCol {
+    color: var(--yellow) !important;
+}
+
+.winTag {
+    margin-left: 0.5rem;
+}
+
+.winner {
+    color: var(--green);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .battleGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .agentSelectors {
+        flex-direction: column;
+    }
+
+    .vs {
+        padding-top: 0;
+    }
+
+    .winnerBanner {
+        font-size: 1rem;
+        flex-wrap: wrap;
+    }
+}

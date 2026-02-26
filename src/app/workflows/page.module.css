@@ -1,0 +1,166 @@
+.page {
+    min-height: 100vh;
+}
+
+.header {
+    padding: 3rem 0 2rem;
+    background: var(--black);
+    color: var(--white);
+    border-bottom: var(--border-thick);
+}
+
+.title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.subtitle {
+    margin-top: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--gray);
+    max-width: 600px;
+}
+
+.strip {
+    background: var(--yellow);
+    border-bottom: var(--border-thick);
+    padding: 1rem 0;
+}
+
+.stripInner {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.stripItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.stripLabel {
+    color: var(--gray-dark);
+}
+
+.stripValue {
+    color: var(--black);
+}
+
+.workflowList {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.workflowBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.workflowMeta {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.workflowNum {
+    font-family: var(--font-mono);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--yellow);
+    line-height: 1;
+    -webkit-text-stroke: 2px var(--black);
+    text-stroke: 2px var(--black);
+    flex-shrink: 0;
+}
+
+.workflowName {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.workflowDesc {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--gray);
+    margin-top: 0.35rem;
+}
+
+.swarmGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.swarmCard {
+    border: 2px solid var(--gray-dark);
+    padding: 1.5rem;
+    transition: border-color var(--transition);
+}
+
+.swarmCard:hover {
+    border-color: var(--yellow);
+}
+
+.swarmNum {
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--yellow);
+    display: block;
+    margin-bottom: 0.75rem;
+    line-height: 1;
+}
+
+.swarmTitle {
+    color: var(--white);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.swarmDesc {
+    font-size: 0.8rem;
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+.cta {
+    padding: 5rem 0;
+    background: var(--yellow);
+    border-top: var(--border-thick);
+}
+
+.ctaSub {
+    font-size: 1.1rem;
+    color: var(--gray-dark);
+    margin-top: 0.75rem;
+}
+
+.ctaButtons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .stripInner {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .swarmGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .workflowMeta {
+        flex-direction: column;
+    }
+}
