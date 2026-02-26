@@ -42,7 +42,7 @@ export default function Navbar() {
                         {theme === "light" ? <Moon size={18} strokeWidth={2.5} /> : <Sun size={18} strokeWidth={2.5} />}
                     </button>
                     <Link href="/submit" className="btn-brutal btn-brutal--primary btn-brutal--sm">
-                        Buy Agent
+                        Deploy Agent
                     </Link>
                 </div>
 
@@ -80,7 +80,7 @@ export default function Navbar() {
                         className="btn-brutal btn-brutal--primary"
                         onClick={() => setIsOpen(false)}
                     >
-                        Buy Agent
+                        Deploy Agent
                     </Link>
                 </div>
             </div>

@@ -174,7 +174,10 @@ export default function AgentDetailPage() {
                             </div>
 
                             <div className={styles.heroCtas}>
-                                <button className="btn-brutal btn-brutal--primary btn-brutal--lg">
+                                <button
+                                    className="btn-brutal btn-brutal--primary btn-brutal--lg"
+                                    onClick={() => alert(`✅ ${agent.name} deployed to your workspace!\n\nCost: $${(agent.cost_per_run || 0.02).toFixed(2)}/run\nSuccess Rate: ${((agent.success_rate || 0) * 100).toFixed(0)}%\n\nView it in your Dashboard.`)}
+                                >
                                     <ShoppingCart size={16} /> BUY — ${(agent.cost_per_run || 0.02).toFixed(2)}
                                 </button>
                                 <Link href="/arena" className="btn-brutal btn-brutal--dark btn-brutal--lg">
@@ -347,7 +350,10 @@ export default function AgentDetailPage() {
                     <div className={styles.ctaCard}>
                         <h3>READY TO USE {agent.name.toUpperCase()}?</h3>
                         <div className={styles.ctaButtons}>
-                            <button className="btn-brutal btn-brutal--primary btn-brutal--lg">
+                            <button
+                                className="btn-brutal btn-brutal--primary btn-brutal--lg"
+                                onClick={() => alert(`✅ ${agent.name} deployed to your workspace!\n\nView it in your Dashboard.`)}
+                            >
                                 <ShoppingCart size={16} /> BUY NOW
                             </button>
                             <Link href="/arena" className="btn-brutal btn-brutal--outline btn-brutal--lg">

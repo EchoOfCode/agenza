@@ -85,7 +85,14 @@ export default function AgentCard({ agent }) {
                     {agent.executions.toLocaleString()} executions
                 </span>
                 <div className={styles.footerActions}>
-                    <button className="btn-brutal btn-brutal--primary btn-brutal--sm">
+                    <button
+                        className="btn-brutal btn-brutal--primary btn-brutal--sm"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            alert(`✅ ${agent.name} deployed to your workspace!\n\nCost: ${agent.cost}/run\nSuccess Rate: ${agent.successRate}\n\nView it in your Dashboard.`);
+                        }}
+                    >
                         <ShoppingCart size={12} /> Buy
                     </button>
                     <Link href={`/agents/${agent.id}`} className="btn-brutal btn-brutal--outline btn-brutal--sm">
