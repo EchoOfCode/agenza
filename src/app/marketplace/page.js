@@ -161,7 +161,7 @@ export default function MarketplacePage() {
                     <div className={styles.resultsHeader}>
                         <span className={styles.resultCount}>
                             {loading ? (
-                                <><Loader size={14} style={{ animation: "spin 1s linear infinite" }} /> LOADING...</>
+                                <><Loader size={14} style={{ animation: "spin 1s linear infinite" }} /> WAKING UP SERVER — Render free tier cold starts in 30-60s...</>
                             ) : (
                                 <>{filtered.length} AGENT{filtered.length !== 1 ? "S" : ""} FOUND</>
                             )}
