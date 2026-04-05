@@ -9,23 +9,50 @@ import styles from "./page.module.css";
 
 const CATEGORIES = ["All", "Research", "Engineering", "Productivity", "Career"];
 
+const SKILL_MAP = {
+    research: [
+        { id: "web-search", name: "WebSearch" },
+        { id: "pdf-parser", name: "PDFParse" },
+        { id: "write-summary", name: "WriteSummary" },
+    ],
+    engineering: [
+        { id: "code-executor", name: "CodeExecutor" },
+        { id: "web-scraper", name: "WebScraper" },
+        { id: "api-connector", name: "RESTApi" },
+    ],
+    productivity: [
+        { id: "calendar-connector", name: "CalendarAPI" },
+        { id: "email-sender", name: "EmailSender" },
+        { id: "markdown-writer", name: "MarkdownWriter" },
+    ],
+    career: [
+        { id: "web-search", name: "WebSearch" },
+        { id: "email-sender", name: "EmailSender" },
+        { id: "write-summary", name: "WriteSummary" },
+    ],
+};
+
 function transformAgent(a) {
+    const cat = a.category || "general";
     return {
         id: a.id,
         name: a.name,
         description: a.description,
-        category: a.category ? a.category.charAt(0).toUpperCase() + a.category.slice(1) : "General",
+        category: cat.charAt(0).toUpperCase() + cat.slice(1),
         brutalScore: Math.round(a.brutal_score || 0),
         speed: `${((a.cost_per_run || 0.02) * 1000).toFixed(0)}s`,
         cost: `$${(a.cost_per_run || 0).toFixed(2)}`,
+        price: a.price || `$${(a.cost_per_run || 0).toFixed(2)}`,
+        priceModel: a.price_model || "per-run",
         successRate: `${((a.success_rate || 0) * 100).toFixed(1)}%`,
         reliability: Math.round((a.success_rate || 0) * 100),
-        creator: "Agenza Team",
+        creator: a.creator || "Agenza Team",
         creatorGithub: "EchoOfCode",
         verified: true,
         toolCalls: ["Search", "Parse", "Write", "Export"],
-        tags: [a.category || "general"],
+        tags: [cat],
         executions: a.total_runs || 0,
+        skills: SKILL_MAP[cat.toLowerCase()] || SKILL_MAP.research,
         status: "active",
     };
 }

@@ -37,18 +37,18 @@ export default function Footer() {
 
                     <div className={styles.col}>
                         <h4 className={styles.colTitle}>Platform</h4>
-                        <Link href="/marketplace">Marketplace</Link>
+                        <Link href="/marketplace">Agent Marketplace</Link>
+                        <Link href="/skills">Skills Marketplace</Link>
                         <Link href="/arena">Arena</Link>
-                        <Link href="/workflows">Workflows</Link>
-                        <Link href="/dashboard">Dashboard</Link>
+                        <Link href="/seller/dashboard">Seller Dashboard</Link>
                     </div>
 
                     <div className={styles.col}>
                         <h4 className={styles.colTitle}>Builders</h4>
+                        <Link href="/sell">Sell Your Agent</Link>
                         <Link href="/submit">Submit Agent</Link>
                         <Link href="/coming-soon">API Docs</Link>
                         <Link href="/coming-soon">Builder Guide</Link>
-                        <Link href="/coming-soon">Pricing</Link>
                     </div>
 
                     <div className={styles.col}>

@@ -1,0 +1,465 @@
+.page {
+    min-height: 100vh;
+}
+
+/* Hero */
+.hero {
+    padding: 4rem 0 3rem;
+    border-bottom: var(--border-thick);
+    background: var(--black);
+    color: var(--white);
+}
+
+.heroBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    background: var(--cyan);
+    color: #0a0a0a;
+    border: 2px solid var(--white);
+    padding: 0.35rem 0.75rem;
+    width: fit-content;
+    margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.heroAccent {
+    color: var(--black);
+    -webkit-text-stroke: 2px var(--white);
+}
+
+.heroSub {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--gray);
+    max-width: 600px;
+}
+
+.heroSub strong {
+    color: var(--cyan);
+}
+
+/* How It Works */
+.howSection {
+    padding: 3rem 0;
+    border-bottom: var(--border-thick);
+    background: var(--yellow);
+}
+
+.howGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.howCard {
+    background: var(--white);
+    border: var(--border);
+    box-shadow: var(--shadow-brutal);
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.howNum {
+    font-family: var(--font-mono);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--yellow);
+    line-height: 1;
+    margin-bottom: 0.75rem;
+}
+
+.howCard h4 {
+    margin-bottom: 0.5rem;
+}
+
+.howCard p {
+    font-size: 0.85rem;
+    color: var(--gray-dark);
+    line-height: 1.5;
+}
+
+.howCard code {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    background: var(--black);
+    color: var(--green);
+    padding: 0.1rem 0.35rem;
+    border: 1px solid var(--black);
+}
+
+/* Example */
+.exampleSection {
+    padding: 3rem 0;
+    border-bottom: var(--border-thick);
+}
+
+.exampleCard {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.exampleTerminal {
+    border: var(--border-thick);
+    overflow: hidden;
+    box-shadow: var(--shadow-brutal-lg);
+}
+
+.exTermHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--gray-dark);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--gray);
+    border-bottom: var(--border);
+}
+
+.exTermBody {
+    background: var(--black);
+    color: var(--white);
+    padding: 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.7;
+}
+
+.exComment { color: var(--cyan); }
+.exCode { color: var(--yellow); }
+.exBlurred {
+    color: var(--gray-dark);
+    filter: blur(3px);
+    user-select: none;
+}
+
+.exampleSub {
+    font-size: 0.85rem;
+    color: var(--gray);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Controls */
+.controls {
+    padding: 1.5rem 0;
+    border-bottom: var(--border);
+    background: var(--off-white);
+}
+
+.controlsInner {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.searchWrap {
+    position: relative;
+    flex: 1;
+    min-width: 250px;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray);
+}
+
+.searchInput {
+    padding-left: 2.5rem !important;
+}
+
+.filters {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.filterGroup {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.catPills {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.pill {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.4rem 0.8rem;
+    border: 2px solid var(--black);
+    background: var(--white);
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.pill:hover { background: var(--cyan); }
+.pillActive { background: var(--black); color: var(--white); }
+
+/* Results */
+.resultsHeader { margin-bottom: 1.5rem; }
+
+.resultCount {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--gray);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.empty {
+    text-align: center;
+    padding: 4rem 0;
+    color: var(--gray);
+}
+
+.empty h3 { margin-bottom: 0.5rem; }
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+/* Preview Modal */
+.modal {
+    background: var(--white);
+    border: var(--border-thick);
+    box-shadow: var(--shadow-brutal-lg);
+    max-width: 600px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: var(--black);
+    color: var(--white);
+    border-bottom: var(--border);
+}
+
+.modalTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.modalClose {
+    background: none;
+    border: none;
+    color: var(--gray);
+    cursor: pointer;
+    transition: color var(--transition);
+}
+
+.modalClose:hover { color: var(--white); }
+
+.modalBody {
+    padding: 1.5rem;
+}
+
+.modalBody h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.modalDesc {
+    font-size: 0.9rem;
+    color: var(--gray-dark);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.modalCapabilities {
+    margin-bottom: 1.5rem;
+}
+
+.modalCapLabel {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--gray);
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.modalCap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    padding: 0.3rem 0;
+}
+
+.modalPreview {
+    border: var(--border);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.modalCodeBody {
+    background: var(--black);
+    color: var(--green);
+    padding: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.6;
+    max-height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+.modalCodeBody code {
+    white-space: pre-wrap;
+}
+
+.modalCodeBlur {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(transparent, var(--black));
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: var(--border);
+}
+
+.modalPrice {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--green);
+}
+
+/* Purchase Modal */
+.purchaseModal {
+    background: var(--white);
+    border: var(--border-thick);
+    box-shadow: var(--shadow-brutal-lg);
+    max-width: 440px;
+    width: 100%;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.purchaseIcon {
+    color: var(--green);
+    margin-bottom: 1rem;
+}
+
+.purchaseModal h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.purchaseFile {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 700;
+    background: var(--off-white);
+    border: var(--border);
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.purchaseDesc {
+    font-size: 0.85rem;
+    color: var(--gray-dark);
+    margin-bottom: 0.5rem;
+}
+
+.purchaseList {
+    list-style: none;
+    text-align: left;
+    max-width: 280px;
+    margin: 0 auto 1.5rem;
+}
+
+.purchaseList li {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 0.2rem 0;
+    color: var(--gray-dark);
+}
+
+.purchaseActions {
+    margin-bottom: 0.75rem;
+}
+
+.purchaseClose {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--gray);
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.purchaseClose:hover {
+    color: var(--black);
+}
+
+@media (max-width: 1024px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .howGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; }
+    .howGrid { grid-template-columns: 1fr; }
+    .controlsInner { flex-direction: column; }
+    .filters { flex-wrap: wrap; }
+}

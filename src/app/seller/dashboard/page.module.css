@@ -1,0 +1,355 @@
+.page {
+    min-height: 100vh;
+    padding-bottom: 4rem;
+}
+
+.header {
+    padding: 2.5rem 0 2rem;
+    border-bottom: var(--border-thick);
+    background: var(--black);
+    color: var(--white);
+}
+
+.headerInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+/* Stats */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.statCard {
+    background: var(--white);
+    border: var(--border);
+    box-shadow: var(--shadow-brutal);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    text-align: center;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.statCard:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0px var(--black);
+}
+
+.statIcon {
+    margin-bottom: 0.25rem;
+}
+
+.statValue {
+    font-family: var(--font-mono);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.statLabel {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: var(--gray);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.statChange {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.statUp {
+    color: var(--green);
+}
+
+.statDown {
+    color: var(--red);
+}
+
+/* Sections */
+.section {
+    margin-bottom: 2.5rem;
+}
+
+.sectionTitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: var(--border);
+}
+
+/* Table */
+.tableWrap {
+    overflow-x: auto;
+    border: var(--border);
+    box-shadow: var(--shadow-brutal);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+}
+
+.table thead {
+    background: var(--black);
+    color: var(--white);
+}
+
+.table th {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0.85rem 1rem;
+    white-space: nowrap;
+}
+
+.table td {
+    padding: 0.85rem 1rem;
+    border-bottom: 2px solid var(--off-white);
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.table tbody tr:hover {
+    background: var(--off-white);
+}
+
+.agentName {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem !important;
+}
+
+.scoreCell {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--green);
+}
+
+.mono {
+    font-family: var(--font-mono);
+    font-weight: 600;
+}
+
+.tableLink {
+    color: var(--gray);
+    transition: color var(--transition);
+}
+
+.tableLink:hover {
+    color: var(--black);
+}
+
+/* Feed */
+.feedList {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: var(--border);
+    box-shadow: var(--shadow-brutal);
+    background: var(--white);
+}
+
+.feedItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    border-bottom: 2px solid var(--off-white);
+    gap: 1rem;
+    transition: background var(--transition);
+}
+
+.feedItem:last-child {
+    border-bottom: none;
+}
+
+.feedItem:hover {
+    background: var(--off-white);
+}
+
+.feedLeft {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.feedResult {
+    flex-shrink: 0;
+}
+
+.feedInfo {
+    min-width: 0;
+}
+
+.feedTop {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.15rem;
+}
+
+.feedBuyer {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.feedAgent {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--gray);
+}
+
+.feedGoal {
+    font-size: 0.8rem;
+    color: var(--gray-dark);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.feedRight {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.feedScore {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.feedTime {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--gray);
+    white-space: nowrap;
+}
+
+.feedTimestamp {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--gray);
+    white-space: nowrap;
+    min-width: 70px;
+    text-align: right;
+}
+
+/* Payouts */
+.payoutList {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: var(--border);
+    box-shadow: var(--shadow-brutal);
+    background: var(--white);
+}
+
+.payoutItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    border-bottom: 2px solid var(--off-white);
+    transition: background var(--transition);
+}
+
+.payoutItem:last-child {
+    border-bottom: none;
+}
+
+.payoutItem:hover {
+    background: var(--off-white);
+}
+
+.payoutLeft {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.payoutDate {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.payoutMethod {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--gray);
+}
+
+.payoutRight {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.payoutAmount {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .headerInner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .feedItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .feedRight {
+        padding-left: 2rem;
+    }
+
+    .payoutItem {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}

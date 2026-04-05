@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Shield, ExternalLink, ShoppingCart } from "lucide-react";
+import { Shield, ShoppingCart, Swords, ExternalLink } from "lucide-react";
 import styles from "./AgentCard.module.css";
 
 function ScoreRing({ score }) {
@@ -49,6 +49,15 @@ export default function AgentCard({ agent }) {
                     <ScoreRing score={agent.brutalScore} />
                 </div>
 
+                <div className={styles.priceRow}>
+                    <span className={styles.priceAmount}>
+                        {agent.price || agent.cost}
+                    </span>
+                    <span className={styles.pricePer}>
+                        {agent.priceModel === "subscription" ? "/mo" : "/run"}
+                    </span>
+                </div>
+
                 <p className={styles.desc}>{agent.description}</p>
 
                 <div className={styles.metrics}>
@@ -57,32 +66,36 @@ export default function AgentCard({ agent }) {
                         <span className={styles.metricValue}>{agent.speed}</span>
                     </div>
                     <div className={styles.metric}>
-                        <span className={styles.metricLabel}>COST</span>
+                        <span className={styles.metricLabel}>COST/RUN</span>
                         <span className={styles.metricValue}>{agent.cost}</span>
                     </div>
                     <div className={styles.metric}>
                         <span className={styles.metricLabel}>SUCCESS</span>
                         <span className={styles.metricValue}>{agent.successRate}</span>
                     </div>
+                    <div className={styles.metric}>
+                        <span className={styles.metricLabel}>TOTAL RUNS</span>
+                        <span className={styles.metricValue}>{(agent.executions || 0).toLocaleString()}</span>
+                    </div>
                 </div>
 
-                <div className={styles.tags}>
-                    {agent.tags.slice(0, 3).map((tag) => (
-                        <span key={tag} className="tag">{tag}</span>
-                    ))}
-                </div>
-
-                <div className={styles.tools}>
-                    <span className={styles.toolsLabel}>TOOLS:</span>
-                    {agent.toolCalls.map((tool) => (
-                        <span key={tool} className={styles.toolChip}>{tool}</span>
-                    ))}
-                </div>
+                {agent.skills && agent.skills.length > 0 && (
+                    <div className={styles.skills}>
+                        <span className={styles.skillsLabel}>SKILLS:</span>
+                        <div className={styles.skillTags}>
+                            {agent.skills.map((skill) => (
+                                <span key={skill.id} className={styles.skillTag}>
+                                    🔒 {skill.name}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </Link>
 
             <div className={styles.footer}>
                 <span className={styles.execCount}>
-                    {agent.executions.toLocaleString()} executions
+                    {(agent.executions || 0).toLocaleString()} runs
                 </span>
                 <div className={styles.footerActions}>
                     <button
@@ -90,13 +103,17 @@ export default function AgentCard({ agent }) {
                         onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
-                            alert(`✅ ${agent.name} deployed to your workspace!\n\nCost: ${agent.cost}/run\nSuccess Rate: ${agent.successRate}\n\nView it in your Dashboard.`);
+                            alert(`✅ ${agent.name} purchased!\n\nCost: ${agent.price || agent.cost}${agent.priceModel === "subscription" ? "/mo" : "/run"}\nSuccess Rate: ${agent.successRate}\n\nView it in your Dashboard.`);
                         }}
                     >
-                        <ShoppingCart size={12} /> Buy
+                        <ShoppingCart size={12} /> BUY
                     </button>
-                    <Link href={`/agents/${agent.id}`} className="btn-brutal btn-brutal--outline btn-brutal--sm">
-                        <ExternalLink size={12} />
+                    <Link
+                        href={`/arena?agent=${agent.id}`}
+                        className="btn-brutal btn-brutal--red btn-brutal--sm"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <Swords size={12} /> BATTLE
                     </Link>
                 </div>
             </div>
