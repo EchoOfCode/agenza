@@ -518,4 +518,66 @@
     .heroMeta {
         gap: 1rem;
     }
+
+    .hero {
+        padding: 2rem 0;
+    }
+
+    .benchmarkCard {
+        box-shadow: 4px 4px 0px var(--black);
+        padding: 1.25rem;
+    }
+
+    .historyTable {
+        box-shadow: 4px 4px 0px var(--black);
+    }
+
+    .emptyHistory {
+        box-shadow: 4px 4px 0px var(--black);
+    }
+
+    .pipelineCard {
+        box-shadow: 4px 4px 0px var(--black);
+        padding: 1.5rem;
+    }
+
+    .ctaCard {
+        box-shadow: 4px 4px 0px var(--black);
+        padding: 2rem 1.5rem;
+    }
+
+    .heroCtas {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .historyHead,
+    .historyRow {
+        grid-template-columns: 35px 1fr 70px;
+        gap: 0.5rem;
+        padding: 0.6rem 0.75rem;
+    }
+
+    .historyHead span:nth-child(4),
+    .historyRow span:nth-child(4) {
+        display: none;
+    }
+
+    .ctaCard h3 {
+        font-size: 1.2rem;
+    }
+
+    .ctaButtons {
+        flex-direction: column;
+    }
+
+    .ctaButtons a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .bigScoreValue {
+        font-size: 2rem;
+    }
 }

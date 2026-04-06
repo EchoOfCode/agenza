@@ -263,4 +263,37 @@
         font-weight: 600;
         text-transform: uppercase;
     }
+
+    .inner {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo span:first-of-type {
+        font-size: 1.1rem;
+    }
+
+    .version {
+        font-size: 0.5rem;
+        padding: 0.1rem 0.3rem;
+    }
+
+    .mobileLink {
+        padding: 0.85rem 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .mobileGroupLabel {
+        padding: 0.6rem 1.25rem 0.2rem;
+    }
+
+    .mobileGroup .mobileLink {
+        padding-left: 2rem;
+        font-size: 0.85rem;
+    }
+
+    .mobileActions {
+        padding: 0.5rem 1.25rem;
+    }
 }

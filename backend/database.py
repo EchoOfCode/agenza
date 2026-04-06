@@ -49,10 +49,19 @@ CREATE TABLE IF NOT EXISTS users (
     total_executions INTEGER DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-                   brutal_score, success_rate, total_runs, cost_per_run)
-                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-                SEED_AGENTS,
-            )
+"""
+
+
+async def init_db():
+    db = await aiosqlite.connect(DB_PATH)
+    try:
+        await db.executescript(SCHEMA)
         await db.commit()
     finally:
         await db.close()
+
+
+async def get_db():
+    db = await aiosqlite.connect(DB_PATH)
+    db.row_factory = aiosqlite.Row
+    return db

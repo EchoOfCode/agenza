@@ -137,4 +137,23 @@
     .filters {
         flex-wrap: wrap;
     }
+
+    .searchWrap {
+        min-width: 100%;
+    }
+
+    .header {
+        padding: 2rem 0 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .catPills {
+        gap: 0.35rem;
+    }
+
+    .pill {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.6rem;
+    }
 }

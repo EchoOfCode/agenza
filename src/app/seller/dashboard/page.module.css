@@ -330,12 +330,34 @@
 
 @media (max-width: 768px) {
     .statsGrid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .headerInner {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .statCard {
+        box-shadow: 4px 4px 0px var(--black);
+        padding: 1.25rem;
+    }
+
+    .statCard:hover {
+        transform: none;
+        box-shadow: 4px 4px 0px var(--black);
+    }
+
+    .tableWrap {
+        box-shadow: 4px 4px 0px var(--black);
+    }
+
+    .feedList {
+        box-shadow: 4px 4px 0px var(--black);
+    }
+
+    .payoutList {
+        box-shadow: 4px 4px 0px var(--black);
     }
 
     .feedItem {
@@ -351,5 +373,29 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
+    }
+
+    .header {
+        padding: 2rem 0 1.5rem;
+    }
+
+    .title {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .statValue {
+        font-size: 1.3rem;
+    }
+
+    .table th,
+    .table td {
+        padding: 0.65rem 0.75rem;
+        font-size: 0.75rem;
     }
 }

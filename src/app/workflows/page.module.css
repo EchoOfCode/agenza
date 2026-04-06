@@ -90,6 +90,7 @@
     font-size: 0.8rem;
     color: var(--gray);
     margin-top: 0.35rem;
+    word-break: break-word;
 }
 
 .swarmGrid {
@@ -162,5 +163,36 @@
 
     .workflowMeta {
         flex-direction: column;
+    }
+
+    .header {
+        padding: 2rem 0 1.5rem;
+    }
+
+    .cta {
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .workflowNum {
+        font-size: 2rem;
+    }
+
+    .workflowName {
+        font-size: 1.3rem;
+    }
+
+    .swarmNum {
+        font-size: 1.5rem;
+    }
+
+    .ctaButtons {
+        flex-direction: column;
+    }
+
+    .ctaButtons a {
+        width: 100%;
+        text-align: center;
     }
 }

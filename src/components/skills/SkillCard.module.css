@@ -280,3 +280,33 @@
 .btnBuy {
     flex: 1;
 }
+
+@media (max-width: 768px) {
+    .card {
+        box-shadow: 4px 4px 0px var(--black);
+    }
+
+    .card:hover {
+        transform: none;
+        box-shadow: 4px 4px 0px var(--black);
+    }
+
+    .cardBody {
+        padding: 1.25rem;
+    }
+
+    .footer {
+        padding: 0.75rem 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .meta {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.25rem;
+    }
+
+    .skillTitle {
+        font-size: 0.95rem;
+    }
+}

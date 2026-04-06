@@ -8,6 +8,7 @@
     border-bottom: var(--border-thick);
     background: var(--black);
     color: var(--white);
+    overflow: hidden;
 }
 
 .heroContent {
@@ -370,8 +371,21 @@
 }
 
 @media (max-width: 768px) {
+    .hero {
+        padding: 3rem 0 2.5rem;
+    }
+
+    .heroTitle {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
     .stepsGrid {
         grid-template-columns: 1fr;
+    }
+
+    .stepCard {
+        box-shadow: 4px 4px 0px var(--black);
+        padding: 2rem 1.25rem;
     }
 
     .formRow {
@@ -379,6 +393,42 @@
     }
 
     .revenueCard {
-        padding: 2rem 1.5rem;
+        padding: 2rem 1.25rem;
+        box-shadow: 4px 4px 0px var(--black);
+    }
+
+    .revenueBar {
+        height: 44px;
+    }
+
+    .reqCard {
+        padding: 1.5rem;
+    }
+
+    .form {
+        padding: 1.5rem;
+        box-shadow: 4px 4px 0px var(--black);
+    }
+
+    .dashPreview {
+        box-shadow: 4px 4px 0px var(--black);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 2.5rem 0 2rem;
+    }
+
+    .heroSub {
+        font-size: 0.95rem;
+    }
+
+    .stepNum {
+        font-size: 2rem;
+    }
+
+    .dashStatValue {
+        font-size: 1.1rem;
     }
 }

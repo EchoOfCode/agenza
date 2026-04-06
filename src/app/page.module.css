@@ -5,6 +5,7 @@
   border-bottom: var(--border-thick);
   background: var(--white);
   overflow: hidden;
+  overflow-x: clip;
 }
 
 .heroInner {
@@ -95,7 +96,7 @@
 .terminalBody {
   background: var(--black);
   padding: 1.25rem;
-  min-height: 320px;
+  min-height: 280px;
   font-family: var(--font-mono);
   font-size: 0.8rem;
   line-height: 1.8;
@@ -313,6 +314,25 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .heroInner {
+    padding: 3rem 1rem;
+    gap: 2rem;
+  }
+
+  .heroTerminal {
+    max-width: 100%;
+  }
+
+  .terminalBody {
+    min-height: 220px;
+    font-size: 0.7rem;
+    padding: 1rem;
+  }
+
   .stepsGrid {
     grid-template-columns: 1fr;
   }
@@ -333,5 +353,61 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+  }
+
+  .stepCard {
+    padding: 2rem 1.25rem;
+    box-shadow: 4px 4px 0px var(--black);
+  }
+
+  .mechanicCard {
+    padding: 1.5rem;
+  }
+
+  .ctaSection {
+    padding: 4rem 0;
+  }
+
+  .statsBlock {
+    gap: 1.5rem;
+    font-size: 0.7rem;
+  }
+
+  .heroCtas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .heroCtas a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroInner {
+    padding: 2rem 0.75rem;
+    gap: 1.5rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(2.2rem, 12vw, 3.5rem);
+  }
+
+  .heroSub {
+    font-size: 1rem;
+  }
+
+  .stepNum {
+    font-size: 2rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .ctaButtons a {
+    width: 100%;
+    text-align: center;
   }
 }
