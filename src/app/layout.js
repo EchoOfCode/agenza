@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function RootLayout({ children }) {
   return (
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
           <main>{children}</main>
           <Footer />
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
